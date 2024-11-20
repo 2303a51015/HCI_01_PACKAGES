@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Package Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function searchPackages() {
+            const searchTerm = document.getElementById('search-bar').value.toLowerCase();
+            const packages = document.querySelectorAll('.package');
+            packages.forEach(package => {
+                const title = package.querySelector('h3').textContent.toLowerCase();
+                const state = package.dataset.state.toLowerCase();
+                if (title.includes(searchTerm) || state.includes(searchTerm)) {
+                    package.style.display = 'block';
+                } else {
+                    package.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>EXPLORE INDIA</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to Our Travel Agency</h2>
+        <p>Luxury, Comfort, and Convenience
+            "Indulge in a premium travel experience with our meticulously crafted packages,
+             blending luxury and comfort for an unforgettable getaway. Let us take care of 
+             every detail, so you can focus on creating memories that last a lifetime.".
+            </p>
+    </section>
+
+    <section id="packages">
+        <h2>Our Travel Packages</h2>
+        <input type="text" id="search-bar" onkeyup="searchPackages()" placeholder="Search by state...">
+        <p>Choose from our curated travel packages across various regions of India. Discover exclusive deals on accommodations, guided tours, and unique experiences.</p>
+    
+        <!-- Goa -->
+        <div class="state-section">
+            <h3>Goa</h3>
+            <div class="package" data-state="Goa">
+                <h3>Goa Beach Escape</h3>
+                <p>Enjoy the vibrant nightlife and beautiful beaches of Goa.</p>
+                <p class="price">Price: ₹20,000</p>
+                <img src="https://t3.ftcdn.net/jpg/01/40/51/56/360_F_140515612_0MMpqpsIvs6xno5YXmPVy9FUmZ4uLnFB.jpg" alt="Goa Beach Escape">
+                <p>Details: This package includes beachside accommodation, water sports activities, and a guided nightlife tour of the famous spots in Goa.</p>
+                <button onclick="showDetails('goa-beach')">More Details</button>
+                <a href="goa-details.html" target="_blank" style="display: inline-block; padding: 10px 15px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">More Details</a>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d488130.6056200533!2d73.71220269352709!3d15.29932654121282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfec1442f2cddd%3A0xc1c4c5ae34fd1e15!2sGoa!5e0!3m2!1sen!2sin!4v1604125477061!5m2!1sen!2sin" width="300" height="200" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="package" data-state="Goa">
+                <h3>Goa Adventure Tour</h3>
+                <p>Experience thrilling water sports and adventure activities.</p>
+                <p class="price">Price: ₹22,000</p>
+                <img src="https://www.tourmyindia.com/states/goa/image/parasailing-in-goa.webp" alt="Goa Adventure Tour">
+                <p>Details: This package includes scuba diving, parasailing, and guided exploration of Goa's scenic cliffs and beaches.</p>
+                <a href="goa-details.html" target="_blank" style="display: inline-block; padding: 10px 15px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">More Details</a>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d488130.6056200533!2d73.71220269352709!3d15.29932654121282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfec1442f2cddd%3A0xc1c4c5ae34fd1e15!2sGoa!5e0!3m2!1sen!2sin!4v1604125477061!5m2!1sen!2sin" width="300" height="200" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <h4>Accommodations in Goa</h4>
+            <ul>
+                <li>Goa Beach Resort - ₹15,000 per night</li>
+                <li>Goa Heritage Hotel - ₹12,000 per night</li>
+                <li>Goa Eco Stay - ₹10,000 per night</li>
+            </ul>
+        </div>
+<!-- Kashmir -->
+<div class="state-section">
+    <h3>Kashmir</h3>
+    <p>Known as "Paradise on Earth," Kashmir is famous for its breathtaking landscapes, lush valleys, and vibrant cultural heritage. Whether it’s the tranquil lakes of Srinagar or the snow-covered peaks of Gulmarg, Kashmir offers an unforgettable experience.</p>
+    
+    <div class="package" data-state="Kashmir">
+        <h3>Kashmir Valley</h3>
+        <p>Immerse yourself in the serene beauty and scenic landscapes of Kashmir Valley. Enjoy a peaceful shikara ride on Dal Lake and explore the gardens of Srinagar, designed in Mughal style.</p>
+        <p class="price">Price: ₹25,000</p>
+        <img src="https://i.pinimg.com/564x/f6/c9/f2/f6c9f21a60330414793a643b01432d7c.jpg" alt="Kashmir Valley">
+        
+        <!-- Kashmir Valley Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317185.6844105098!2d74.7877!3d34.083658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38fdeb4bf778f0f5%3A0x44c4f9af50660b64!2sKashmir!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    
+    <div class="package" data-state="Kashmir">
+        <h3>Kashmir Winter Wonderland</h3>
+        <p>Explore Gulmarg, a top winter destination in India. Enjoy skiing, snowboarding, and other winter activities amidst snow-capped mountains and panoramic views.</p>
+        <p class="price">Price: ₹28,000</p>
+        <img src="https://www.lovelytrails.com/admin/image.php?path=privateToursImages%2F16275393100.jpg" alt="Kashmir Winter Wonderland">
+        
+        <!-- Gulmarg Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.5932227064764!2d74.3750!3d34.0492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e183b2d1f007f5%3A0xc1e1d31b02d247cd!2sGulmarg!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <h4>Accommodations in Kashmir</h4>
+    <ul>
+        <li>Srinagar Deluxe Houseboat - ₹18,000 per night</li>
+        <li>Gulmarg Resort - ₹20,000 per night</li>
+        <li>Kashmir Valley Lodge - ₹15,000 per night</li>
+    </ul>
+</div>
+
+
+        <!-- Rajasthan -->
+<div class="state-section">
+    <h3>Rajasthan</h3>
+    <p>Rajasthan, the "Land of Kings," is known for its grand palaces, majestic forts, vibrant culture, and desert landscapes. Explore the rich heritage, royal architecture, and colorful markets of Rajasthan’s historical cities.</p>
+    
+    <div class="package" data-state="Rajasthan">
+        <h3>Rajasthan Heritage Tour</h3>
+        <p>Discover the opulent palaces and grand forts of Rajasthan, including Jaipur, Udaipur, Jodhpur, and Jaisalmer. Marvel at the architectural splendor and dive into the rich history of these ancient kingdoms.</p>
+        <p class="price">Price: ₹30,000</p>
+        <img src="https://www.ravitoursindia.com/wp-content/uploads/2023/02/best-things-to-do-in-rajasthan.jpg" alt="Rajasthan Heritage Tour">
+        
+        <!-- Rajasthan Heritage Tour Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.9924894448877!2d75.7844!3d26.9124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db4cf6bfcce47%3A0xbb2d715ac26e8c69!2sJaipur%2C%20Rajasthan%2C%20India!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    
+    <div class="package" data-state="Rajasthan">
+        <h3>Jaipur Royal Experience</h3>
+        <p>Known as the Pink City, Jaipur is home to beautiful palaces, vibrant bazaars, and rich Rajasthani culture. Visit the City Palace, Hawa Mahal, and the Amber Fort, while experiencing the royal lifestyle.</p>
+        <p class="price">Price: ₹17,000</p>
+        <img src="https://www.designpataki.com/wp-content/uploads/2022/10/Airbnb-Gudliya-Suite-City-Palace-Jaipur-Royal-Experience-Design-Pataki-1.jpg" alt="Jaipur Royal Experience">
+        
+        <!-- Jaipur Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.9924894448877!2d75.7844!3d26.9124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db4cf6bfcce47%3A0xbb2d715ac26e8c69!2sJaipur%2C%20Rajasthan%2C%20India!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <h4>Accommodations in Rajasthan</h4>
+    <ul>
+        <li>Udaipur Lake Palace Hotel - ₹22,000 per night</li>
+        <li>Jodhpur Umaid Bhawan Palace - ₹35,000 per night</li>
+        <li>Jaisalmer Desert Camp - ₹10,000 per night</li>
+    </ul>
+</div>
+
+
+        <!-- Kerala -->
+<div class="state-section">
+    <h3>Kerala</h3>
+    <p>Known as "God's Own Country," Kerala offers stunning landscapes, lush greenery, serene backwaters, and scenic hill stations. Experience the unique charm and natural beauty of this tropical paradise.</p>
+    
+    <div class="package" data-state="Kerala">
+        <h3>Kerala Backwaters</h3>
+        <p>Embark on a serene journey through the Kerala backwaters on a traditional houseboat, passing by lush coconut groves, paddy fields, and rustic villages. Enjoy a peaceful and rejuvenating experience as you float along these tranquil waters.</p>
+        <p class="price">Price: ₹22,000</p>
+        <img src="https://www.keralatourism.org/images/picture/large/Backwaters_of_Kerala_1823.jpg" alt="Kerala Backwaters">
+        
+        <!-- Kerala Backwaters Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.3953546264966!2d76.3388!3d10.4866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85319de640d17%3A0x7b51e7c1be4370!2sAlleppey%20Backwaters%2C%20Kerala%2C%20India!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    
+    <div class="package" data-state="Kerala">
+        <h3>Munnar Hill Station</h3>
+        <p>Discover Munnar, a charming hill station surrounded by vast tea plantations, mist-covered mountains, and scenic viewpoints. Enjoy a peaceful getaway with breathtaking scenery and lush greenery.</p>
+        <p class="price">Price: ₹20,000</p>
+        <img src="https://images.herzindagi.info/image/2023/Jul/hill-stations-near-munnar.jpg" alt="Munnar Hill Station">
+        
+        <!-- Munnar Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.9993536727115!2d77.0595238!3d10.0891671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0798df9b1e27e7%3A0xb0dd6c6e35109e55!2sMunnar%2C%20Kerala%2C%20India!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <h4>Accommodations in Kerala</h4>
+    <ul>
+        <li>Alleppey Houseboat - ₹12,000 per night</li>
+        <li>Munnar Tea Garden Resort - ₹18,000 per night</li>
+        <li>Kumarakom Lake Resort - ₹20,000 per night</li>
+    </ul>
+</div>
+
+
+
+        <!-- Karnataka -->
+<div class="state-section">
+    <h3>Karnataka</h3>
+    <p>Karnataka, known for its rich cultural heritage and diverse landscapes, is home to ancient ruins, lush hill stations, and vibrant cities. Explore the beauty and history of this magnificent state.</p>
+    
+    <div class="package" data-state="Karnataka">
+        <h3>Hampi Ruins</h3>
+        <p>Explore the ancient ruins of Hampi, a UNESCO World Heritage Site, famous for its stunning temples, royal complexes, and captivating landscapes. Wander through the remnants of a once-flourishing city that dates back to the Vijayanagara Empire.</p>
+        <p class="price">Price: ₹18,000</p>
+        <img src="https://media.easemytrip.com/media/Blog/India/637925291200301189/637925291200301189sxgzqv.jpg" alt="Hampi Ruins">
+        
+        <!-- Hampi Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d390019.23376008835!2d76.45838223453043!3d15.335139446696733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b071290b1e0b2c1%3A0xc0d06b10d32cf223!2sHampi%2C%20Karnataka%2C%20India!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    
+    <div class="package" data-state="Karnataka">
+        <h3>Coorg Coffee Trails</h3>
+        <p>Visit Coorg, known as the "Scotland of India," where you can explore lush coffee plantations, rolling hills, and breathtaking waterfalls. Engage in coffee tasting and learn about the unique coffee cultivation process in this beautiful region.</p>
+        <p class="price">Price: ₹15,000</p>
+        <img src="https://levista.in/cdn/shop/articles/History_Of_Coorg_Coffee_-_Levista.png?v=1665554283" alt="Coorg Coffee Trails">
+        
+        <!-- Coorg Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d186942.95569059882!2d75.79228408026266!3d12.422660062991093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3c8cd9c7985d%3A0x80ab37a20b12af35!2sCoorg%2C%20Karnataka%2C%20India!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <h4>Accommodations in Karnataka</h4>
+    <ul>
+        <li>Hampi Heritage Resort - ₹6,000 per night</li>
+        <li>Coorg Coffee Plantation Homestay - ₹4,500 per night</li>
+        <li>Orange County, Coorg - ₹12,000 per night</li>
+    </ul>
+</div>
+
+
+        <!-- Uttar Pradesh -->
+<div class="state-section">
+    <h3>Uttar Pradesh</h3>
+    <p>Uttar Pradesh, one of India's most historically rich states, is home to iconic landmarks, spiritual sites, and a vibrant culture. Explore its mesmerizing cities and their historical significance.</p>
+    
+    <div class="package" data-state="Uttar Pradesh">
+        <h3>Agra Heritage Tour</h3>
+        <p>Marvel at the stunning Taj Mahal, a UNESCO World Heritage Site and a symbol of love, along with other historical landmarks such as Agra Fort and Mehtab Bagh. This tour offers a glimpse into the Mughal era and its architectural brilliance.</p>
+        <p class="price">Price: ₹12,000</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Taj_Mahal_%28Edited%29.jpeg/365px-Taj_Mahal_%28Edited%29.jpeg" alt="Agra Heritage Tour">
+        
+        <!-- Agra Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106533.7798831714!2d78.0299429720865!3d27.175144780860126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39747ca74f1bd935%3A0x41b1e00754454691!2sTaj%20Mahal%2C%20Dharmapuri%2C%20Tajganj%2C%20Agra%2C%20Uttar%20Pradesh%20128201%2C%20India!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    
+    <div class="package" data-state="Uttar Pradesh">
+        <h3>Varanasi Spiritual Experience</h3>
+        <p>Witness the spiritual aura of Varanasi, one of the oldest inhabited cities in the world, along the banks of the Ganges River. Experience the evening Ganga Aarti ceremony, explore ancient temples, and take a boat ride on the river for an unforgettable experience.</p>
+        <p class="price">Price: ₹14,000</p>
+        <img src="https://servdharm.com/cdn/shop/articles/Wallpaper_800x.jpg?v=1694405183" alt="Varanasi Spiritual Experience">
+        
+        <!-- Varanasi Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d793104.8688560333!2d80.20846974738917!3d25.317645611576002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399b160607a7ab99%3A0x60c4310b699b3e8a!2sVaranasi%2C%20Uttar%20Pradesh%2C%20India!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <h4>Accommodations in Uttar Pradesh</h4>
+    <ul>
+        <li>Tajview Hotel, Agra - ₹5,000 per night</li>
+        <li>BrijRama Palace, Varanasi - ₹7,000 per night</li>
+        <li>ITC Mughal, Agra - ₹10,000 per night</li>
+    </ul>
+</div>
+
+
+        <!-- Himachal Pradesh -->
+<div class="state-section">
+    <h3>Himachal Pradesh</h3>
+    <p>Himachal Pradesh is known for its stunning landscapes, lush valleys, and snow-capped mountains. This northern state offers a perfect getaway for nature lovers and adventure enthusiasts alike.</p>
+    
+    <div class="package" data-state="Himachal Pradesh">
+        <h3>Shimla Hill Station</h3>
+        <p>Enjoy the cool climate and scenic beauty of Shimla, the summer capital of British India. Stroll along the Mall Road, visit the historic Christ Church, and take in breathtaking views from Jakhoo Hill.</p>
+        <p class="price">Price: ₹14,000</p>
+        <img src="https://www.holidify.com/images/bgImages/KUFRI.jpg" alt="Shimla Hill Station">
+        
+        <!-- Shimla Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106531.7460776954!2d77.10437142370896!3d31.10416926689616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3904ff5fce626c25%3A0xdea1e7aafbb6d582!2sShimla%2C%20Himachal%20Pradesh%2C%20India!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    
+    <div class="package" data-state="Himachal Pradesh">
+        <h3>Manali Adventure Trip</h3>
+        <p>Experience snow activities and natural beauty in Manali, a popular hill station surrounded by towering mountains. Engage in adventure sports such as paragliding, skiing, and trekking, or visit the picturesque Solang Valley and Rohtang Pass.</p>
+        <p class="price">Price: ₹16,000</p>
+        <img src="https://brozaadventures.com/soft/file_store/detaild_itenary/602262174CJ.jpg" alt="Manali Adventure Trip">
+        
+        <!-- Manali Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106894.6789161726!2d77.16636148052093!3d32.23958820116263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3909ef33d5c6c82b%3A0x8f2e89c615a448f0!2sManali%2C%20Himachal%20Pradesh%2C%20India!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <h4>Accommodations in Himachal Pradesh</h4>
+    <ul>
+        <li>Wildflower Hall, Shimla - ₹12,000 per night</li>
+        <li>Manali Inn, Manali - ₹8,000 per night</li>
+        <li>The Himalayan, Manali - ₹10,000 per night</li>
+    </ul>
+</div>
+
+
+        <!-- Andaman and Nicobar Islands -->
+<div class="state-section">
+    <h3>Andaman and Nicobar Islands</h3>
+    <p>The Andaman and Nicobar Islands are a tropical paradise known for their stunning beaches, rich marine life, and vibrant culture. An ideal destination for beach lovers and adventure seekers alike, these islands offer a unique blend of relaxation and exploration.</p>
+    
+    <div class="package" data-state="Andaman and Nicobar Islands">
+        <h3>Andaman Islands Adventure</h3>
+        <p>Relax on the pristine beaches and explore the underwater world of the Andaman Islands. Enjoy activities like beach hopping, snorkeling, and island tours, as well as witnessing the breathtaking sunsets at Radhanagar Beach.</p>
+        <p class="price">Price: ₹35,000</p>
+        <img src="https://media.licdn.com/dms/image/D5612AQHSqxiDMsY-qQ/article-cover_image-shrink_720_1280/0/1668507140849?e=2147483647&v=beta&t=rBrCCpegvukUOr76y9byzL55VFynP9fVHZf-RJGnQYM" alt="Andaman Islands Adventure">
+        
+        <!-- Andaman Islands Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d264322.0902176589!2d92.62806722589157!3d11.623858710677265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a038d3cf1d5a81%3A0xc716fd6c5470a5e4!2sAndaman%20and%20Nicobar%20Islands!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    
+    <div class="package" data-state="Andaman and Nicobar Islands">
+        <h3>Scuba Diving Experience</h3>
+        <p>Explore the vibrant marine life with a guided scuba diving tour in the Andaman Islands. Witness stunning coral reefs, colorful fish, and other exotic underwater creatures while enjoying an unforgettable diving experience.</p>
+        <p class="price">Price: ₹40,000</p>
+        <img src="https://www.andamantourism.org/wp-content/uploads/2023/07/Scuba-Diving-in-Andaman.jpg" alt="Scuba Diving Experience">
+        
+        <!-- Scuba Diving Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d261680.3652216469!2d92.59709196074652!3d11.615387642304642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a03773d5c9d0ab%3A0xf6f9a6ed6f3e9a72!2sHavelock%20Island%20(Shyamnagar)!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <h4>Accommodations in Andaman and Nicobar Islands</h4>
+    <ul>
+        <li>Barefoot at Havelock - ₹10,000 per night</li>
+        <li>Symphony Palms Beach Resort - ₹8,000 per night</li>
+        <li>SeaShell, Havelock - ₹9,000 per night</li>
+    </ul>
+</div>
+
+
+        <!-- Delhi -->
+<div class="state-section">
+    <h3>Delhi</h3>
+    <p>Delhi, the capital of India, is a vibrant city that seamlessly blends history with modernity. From its ancient monuments to bustling markets, Delhi offers a rich cultural experience for every traveler.</p>
+    
+    <div class="package" data-state="Delhi">
+        <h3>Delhi City Tour</h3>
+        <p>Discover the historical landmarks and bustling streets of India’s capital, Delhi. Visit iconic sites such as India Gate, Qutub Minar, and the Red Fort while immersing yourself in the diverse culture and cuisine of the city.</p>
+        <p class="price">Price: ₹10,000</p>
+        <img src="https://delhitourism.gov.in/dttdc/images/About_Img.jpg" alt="Delhi City Tour">
+        
+        <!-- Delhi City Tour Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29463.979264580818!2d77.21767091926319!3d28.63530863312453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2f2c48562e1%3A0xe646c7cfb3a4c7d8!2sConnaught%20Place!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    
+    <div class="package" data-state="Delhi">
+        <h3>Old Delhi Heritage Walk</h3>
+        <p>Explore the narrow lanes and historic monuments of Old Delhi. Experience the vibrant culture, taste street food, and visit landmarks like Jama Masjid, Chandni Chowk, and the Red Fort, while learning about the rich history of this ancient city.</p>
+        <p class="price">Price: ₹8,000</p>
+        <img src="https://masterjikeehaveli.com/wp-content/uploads/2020/01/old-delhi-walking-tour-33.jpg" alt="Old Delhi Heritage Walk">
+        
+        <!-- Old Delhi Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12470.51459725038!2d77.22741421043837!3d28.656136923859302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2c62722e801%3A0x22c0a0e0cfc67e10!2sChandni%20Chowk!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <h4>Accommodations in Delhi</h4>
+    <ul>
+        <li>The Imperial, New Delhi - ₹15,000 per night</li>
+        <li>ITC Maurya - ₹14,000 per night</li>
+        <li>Hilton Garden Inn - ₹8,000 per night</li>
+    </ul>
+</div>
+
+        
+        <!-- Tamil Nadu -->
+<div class="state-section">
+    <h3>Tamil Nadu</h3>
+    <h4>Chennai</h4>
+    <p>Chennai, the capital city of Tamil Nadu, is known for its rich cultural heritage, beautiful beaches, and historical landmarks. With its vibrant arts scene, traditional music, and delicious cuisine, Chennai offers a unique experience for every traveler.</p>
+    
+    <div class="package" data-state="Chennai">
+        <h3>Marina Beach Tour</h3>
+        <p>Relax at the longest urban beach in India and enjoy the coastal beauty of Chennai. Marina Beach is famous for its stunning sunrise views, lively promenade, and various food stalls offering local delicacies.</p>
+        <p class="price">Price: ₹8,000</p>
+        <img src="https://t4.ftcdn.net/jpg/04/84/47/27/360_F_484472702_acpl3SZTBwb2Al4ZiW8VusICp7Utl8ed.jpg" alt="Marina Beach Tour">
+        
+        <!-- Marina Beach Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.847813084178!2d80.28310161482496!3d13.052479290303155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526609d46b7eeb%3A0x79d2e3b4049d24f7!2sMarina%20Beach!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    
+    <div class="package" data-state="Chennai">
+        <h3>Mahabalipuram Heritage Tour</h3>
+        <p>Explore the ancient rock-cut temples and UNESCO World Heritage sites in Mahabalipuram. This tour includes visits to the Shore Temple, Arjuna's Penance, and the Pancha Rathas, showcasing the rich architectural legacy of the Pallava dynasty.</p>
+        <p class="price">Price: ₹10,000</p>
+        <img src="https://static.toiimg.com/photo/msid-100986750,width-96,height-65.cms" alt="Mahabalipuram Heritage Tour">
+        
+        <!-- Mahabalipuram Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.3225715054635!2d80.22461321482508!3d12.614373119326695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52568ab4d6eeef%3A0xc0c93aab1e058e32!2sMahabalipuram%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <h4>Accommodations in Chennai</h4>
+    <ul>
+        <li>ITC Grand Chola - ₹12,000 per night</li>
+        <li>The Leela Palace Chennai - ₹14,000 per night</li>
+        <li>Radisson Blu Hotel Chennai - ₹9,000 per night</li>
+    </ul>
+</div>
+
+    
+
+        <!-- Maharashtra -->
+<div class="state-section">
+    <h3>Maharashtra</h3>
+    <h4>Mumbai</h4>
+    <p>Mumbai, the financial capital of India, is a vibrant metropolis known for its bustling life, iconic landmarks, and rich cultural heritage. Experience the blend of modernity and tradition as you explore this dynamic city.</p>
+    
+    <div class="package" data-state="Maharashtra">
+        <h3>Mumbai City Tour</h3>
+        <p>Explore the bustling streets of Mumbai, visit iconic landmarks like the Gateway of India, Marine Drive, and the historic Chhatrapati Shivaji Terminus. Discover the city's rich history, diverse culture, and mouthwatering street food.</p>
+        <p class="price">Price: ₹18,000</p>
+        <img src="https://media.istockphoto.com/id/860528756/photo/the-bandraworli-sea-link-mumbai-india.jpg?s=612x612&w=0&k=20&c=xT9TK7oYkP6TP62lHqP0H-9mfz9cWva4OcYEnt06cjc=" alt="Mumbai City Tour">
+        
+        <!-- Mumbai Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.2641634057094!2d72.83416351479284!3d18.921984387607313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8a90d1e3c5b%3A0xc4ab0e5b31ecb192!2sGateway%20of%20India!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    
+    <h4>Lonavala</h4>
+    <p>Lonavala, a popular hill station near Mumbai, is known for its stunning natural beauty, lush green valleys, and refreshing waterfalls. A perfect escape for nature lovers and adventure enthusiasts alike.</p>
+    
+    <div class="package" data-state="Maharashtra">
+        <h3>Lonavala Hill Station</h3>
+        <p>Experience the lush greenery and beautiful waterfalls of Lonavala, the popular weekend getaway. Explore famous attractions like Bhushi Dam, Lion's Point, and the ancient Karla Caves.</p>
+        <p class="price">Price: ₹12,000</p>
+        <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/98/ba/39.jpg" alt="Lonavala Hill Station">
+        
+        <!-- Lonavala Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.874156202893!2d73.39426681482514!3d18.74558738733284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a086dad7cc41%3A0x55e4c531b4e0f30!2sLonavala!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <h4>Accommodations in Maharashtra</h4>
+    <ul>
+        <li>The Taj Mahal Palace, Mumbai - ₹25,000 per night</li>
+        <li>JW Marriott Mumbai Juhu - ₹20,000 per night</li>
+        <li>Sunnyda Hills Resort, Lonavala - ₹5,000 per night</li>
+    </ul>
+</div>
+
+    
+        <!-- Telangana -->
+<div class="state-section">
+    <h3>Telangana</h3>
+    
+    <h4>Hyderabad</h4>
+    <p>Hyderabad, known as the "City of Pearls," is famous for its rich history, stunning architecture, and vibrant culture. Explore the unique blend of tradition and modernity that defines this bustling metropolis.</p>
+    
+    <div class="package" data-state="Telangana">
+        <h3>Hyderabad City Tour</h3>
+        <p>Explore the historic landmarks, including the iconic Charminar, the grand Golconda Fort, and the beautiful Hussain Sagar Lake. Don't miss the delicious local cuisine, especially the famous Hyderabadi Biryani.</p>
+        <p class="price">Price: ₹12,000</p>
+        <img src="https://www.bestbus.in/assets/images/news-cms/1-Day-Hyderabad-City-Tour-by-Bus.jpeg" alt="Hyderabad City Tour">
+        
+        <!-- Hyderabad Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119436.1904813993!2d78.40749910510814!3d17.385044253516223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a33c8e1d68c4e03%3A0x4c6fd9b5e8a4d41!2sCharminar!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    
+    <h4>Ramoji Film City</h4>
+    <p>Ramoji Film City is the world's largest film city and a major tourism destination. Experience the magic of cinema with guided tours, live shows, and film sets, making it a perfect outing for families and movie buffs.</p>
+    
+    <div class="package" data-state="Telangana">
+        <h3>Ramoji Film City Experience</h3>
+        <p>Discover the magic of cinema at Ramoji Film City. Enjoy guided tours of film sets, thrilling live shows, and the chance to see behind the scenes of film production. Perfect for families and movie lovers alike!</p>
+        <p class="price">Price: ₹10,000</p>
+        <img src="https://www.gokitetours.com/wp-content/uploads/2024/04/Things-to-Do-at-Ramoji-Film-City-in-Hyderabad.webp" alt="Ramoji Film City Experience">
+        
+        <!-- Ramoji Film City Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121556.37350512884!2d78.69444145423315!3d17.302711632174334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a33cbefb7a5ef17%3A0x46e3c5d9cc687c15!2sRamoji%20Film%20City!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <h4>Warangal</h4>
+    <p>Warangal, known for its rich historical heritage, is home to ancient temples, beautiful lakes, and stunning landscapes. The city’s historical significance is evident in its architecture and archaeological sites.</p>
+    
+    <div class="package" data-state="Telangana">
+        <h3>Warangal Heritage Tour</h3>
+        <p>Explore the ancient temples and rich history of Warangal, including the impressive Warangal Fort, the Thousand Pillar Temple, and the beautiful Bhadrakali Temple. Experience the cultural richness and historical significance of this ancient city.</p>
+        <p class="price">Price: ₹15,000</p>
+        <img src="https://www.indiatourismguide.in/wp-content/uploads/2017/11/Warangal-Fort.jpg" alt="Warangal Heritage Tour">
+        
+        <!-- Warangal Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1582353.8515468442!2d79.59991166807852!3d17.978392953087503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a33cc4eb6e3a641%3A0x72aa354b14b5e491!2sWarangal!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</div>
+
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At our travel agency, we are passionate explorers committed to crafting exceptional travel experiences tailored just for you. Our team of dedicated travel enthusiasts brings extensive expertise and local insights to ensure that every journey is unforgettable. Join us as we help you discover the beauty and diversity of the world, one adventure at a time.</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feedback, or need assistance with your travel plans, we would love to hear from you! Please fill out the form below, and our dedicated team will get back to you shortly.</p>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+    
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+    
+            <button type="submit">Send Message</button>
+        </form>
+        <p>You can also reach us directly at:</p>
+        <p>Email: <a href="srikarangurrapu.com">srikarangurrapu.com</a></p>
+        <p>Phone: <a href="8317519658">8317519658</a></p>
+        <p>Follow us on social media for updates and travel inspiration:</p>
+        <ul>
+            <li><a href="https://www.facebook.com/youragency" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com/youragency" target="_blank">Instagram</a></li>
+            <li><a href="https://www.twitter.com/youragency" target="_blank">Twitter</a></li>
+        </ul>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2024 Travel Agency. All rights reserved.</p>
+    </footer>
+</body>
+</html>
